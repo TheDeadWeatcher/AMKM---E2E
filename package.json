@@ -7,7 +7,7 @@
     "open": "npx cypress open",
     "spec": "npx cypress run --spec 'cypress/e2e/about.cy.js'",
     "all": "npx cypress run --e2e 'cypress/e2e/*.cy.js'",
-    "chrome": "npx cypress run --browser chrome --spec 'cypress/e2e/home.cy.js'",
+    "chrome": "npx cypress run --browser chrome --spec 'cypress/e2e/*.cy.js'",
     "firefox": "npm run spec -- --browser firefox",
     "edge": "npm run spec -- --browser edge",
     "browser": "npm run spec -- --browser firefox & npm run spec -- --browser edge npm run spec -- --browser chrome",

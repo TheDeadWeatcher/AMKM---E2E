@@ -25,8 +25,8 @@ describe('Our team - E2E for AMKM group', () => {
     cy.get('h1').should('contain', 'Our Team');
     cy.get('p').should('contain', 'We are a team of planners, creatives and forward-thinking individuals.');
   });
-  it.only('Should check all img and correct url', () => {
-    cy.get('.image-wrap.tf_rel.tf_mw img').should('have.length', 9).and('be.visible');
-    // cy.checkLinksUrlsTitles('.image-wrap.tf_rel.tf_mw img');
+  it.only('Should check worker profile "a" tag and correct url', () => {
+    cy.get('.image-title a').should('have.length', 6).and('be.visible');
+    cy.checkLinksUrlsTitles('.image-title a');
   });
 });
