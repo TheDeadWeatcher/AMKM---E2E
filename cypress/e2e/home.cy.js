@@ -60,9 +60,10 @@ describe('Home - E2E for AMKM group', () => {
     cy.url().should('eq', url.aboutUrl);
   });
 
-  // it.only('Should verify visibilty of back to top button also verify correct url', () => {
-  //   cy.get('[data-css_id="c9ji437"]').scrollIntoView();
-  //   cy.get('.back-top-float').should('be.visible').click();
-  //   cy.url().should('eq', url.homeUrl);
-  // });
+  it('Should verify visibilty of back to top button also verify correct url', () => {
+    cy.get('[data-css_id="c9ji437"]').scrollIntoView();
+    cy.get('.back-top-float').should('have.css', 'opacity', '0');
+    cy.get('.back-top-float').invoke('css', 'opacity', '1').invoke('css', 'pointer-events', 'auto').click();
+    cy.url().should('eq', 'https://www.amkmgroup.com/#header');
+  });
 });
