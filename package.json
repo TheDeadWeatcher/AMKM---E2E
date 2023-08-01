@@ -14,5 +14,8 @@
     "regression": "npm run all -- --browser firefox & npm run all -- --browser edge npm run all -- --browser chrome "
   },
   "author": "Bartosz Jasyk",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.5.1"
+  }
 }
