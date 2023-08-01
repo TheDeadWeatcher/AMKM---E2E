@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Contact - E2E for AMKM group', () => {
+describe('Footer - E2E for AMKM group', () => {
   before(function () {
     cy.fixture('pagesUrl').then(function (url) {
       globalThis.url = url;
