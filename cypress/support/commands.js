@@ -46,3 +46,20 @@ Cypress.Commands.add('checkLinksUrlsTitles', ($selector) => {
     });
   });
 });
+
+Cypress.Commands.add('checkLinksUrl', ($selector) => {
+  cy.get($selector).each(($link) => {
+    cy.wrap($link).then(($link) => {
+      const href = $link.attr('href');
+      cy.visit(href);
+      cy.url().should('include', href);
+      cy.go('back');
+    });
+  });
+});
+
+// Cypress.Commands.add('checkLinksUrls', ($selector1, $selector2, $selector3) => {
+//   cy.get($selector1).find($selector2).should('contain', 'Online stores');
+//   cy.get($selector1).find($selector3).should('contain', 'Our brands are unique');
+//   cy.get($selector1).should('be.visible');
+// });
