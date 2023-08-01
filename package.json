@@ -6,12 +6,12 @@
   "scripts": {
     "open": "npx cypress open",
     "spec": "npx cypress run --spec 'cypress/e2e/cooperation.cy.js'",
-    "all": "npx cypress run --e2e 'cypress/e2e/*.cy.js'",
+    "all": "npx cypress run --e2e 'cypress/e2e/*.cy.js'  --record --key 1070988f-523d-450d-bc20-93442fda0807 ",
     "chrome": "npx cypress run --browser chrome --spec 'cypress/e2e/*.cy.js'",
     "firefox": "npm run spec -- --browser firefox",
     "edge": "npm run spec -- --browser edge",
     "browser": "npm run spec -- --browser firefox & npm run spec -- --browser edge npm run spec -- --browser chrome",
-    "browserAll": "npm run all -- --browser firefox & npm run all -- --browser edge npm run all -- --browser chrome"
+    "regression": "npm run all -- --browser firefox & npm run all -- --browser edge npm run all -- --browser chrome "
   },
   "author": "Bartosz Jasyk",
   "license": "ISC"
